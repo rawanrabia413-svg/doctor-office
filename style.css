@@ -1,0 +1,332 @@
+/*========== Google Font ==========*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fa;
+    color:#222;
+}
+
+/*========== Header ==========*/
+
+header{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo h2{
+    color:#0b7a75;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:700;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#0b7a75;
+}
+
+.btn{
+    background:#25D366;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:30px;
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(37,211,102,.4);
+}
+
+/*========== Hero ==========*/
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 8%;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:50px;
+    color:#0b7a75;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    line-height:2;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+.hero-btn,
+.hero-btn2{
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.4s;
+}
+
+.hero-btn{
+    background:#0b7a75;
+    color:#fff;
+}
+
+.hero-btn2{
+    border:2px solid #0b7a75;
+    color:#0b7a75;
+}
+
+.hero-btn:hover,
+.hero-btn2:hover{
+    transform:scale(1.05);
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:450px;
+    border-radius:20px;
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
+
+/*========== Sections ==========*/
+
+section{
+    padding:70px 8%;
+}
+
+section h2{
+    text-align:center;
+    color:#0b7a75;
+    margin-bottom:40px;
+    font-size:35px;
+}
+
+/*========== Cards ==========*/
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    padding:30px;
+    text-align:center;
+    border-radius:20px;
+    transition:.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card i{
+    font-size:45px;
+    color:#0b7a75;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+/*========== FAQ ==========*/
+
+.question{
+    background:#fff;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/*========== Contact ==========*/
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:600px;
+    margin:auto;
+}
+
+form input,
+form textarea{
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+}
+
+form textarea{
+    height:150px;
+    resize:none;
+}
+
+form button{
+    background:#0b7a75;
+    color:#fff;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+form button:hover{
+    background:#095f5b;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact .btn{
+    display:inline-block;
+    margin-top:25px;
+}
+
+/*========== Footer ==========*/
+
+footer{
+    background:#0b7a75;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+/*========== Responsive ==========*/
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.buttons{
+    justify-content:center;
+}
+
+}
+/*========== Dark Mode Button ==========*/
+
+.theme-btn{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#0b7a75;
+    color:#fff;
+    cursor:pointer;
+    font-size:18px;
+    transition:.4s;
+}
+
+.theme-btn:hover{
+    transform:rotate(180deg);
+}
+
+/*========== Dark Mode ==========*/
+
+body.dark{
+    background:#111827;
+    color:#fff;
+}
+
+body.dark header{
+    background:#1f2937;
+}
+
+body.dark .card,
+body.dark .question,
+body.dark form,
+body.dark footer{
+    background:#1f2937;
+    color:#fff;
+}
+
+body.dark input,
+body.dark textarea{
+    background:#374151;
+    color:#fff;
+    border:1px solid #4b5563;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder{
+    color:#d1d5db;
+}
+
+body.dark nav a{
+    color:#fff;
+}
+
+body.dark section h2,
+body.dark .hero-text h1{
+    color:#4ade80;
+}
+
+body,
+header,
+.card,
+.question,
+footer,
+input,
+textarea{
+    transition:.4s;
+}
